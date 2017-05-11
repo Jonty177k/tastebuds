@@ -1,0 +1,184 @@
+<!-- Login Index Page
+Users Login or Create Accounts-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script src="js/wow.min.js"></script>
+	<script src="js/wow.js"></script>
+<!-- <script src="js/particles.js"></script> -->	
+	<script src="js/particles.min.js"></script>
+	<title>TasteBuds</title>
+</head>
+<body>
+	<div id="user-background">
+	 	<nav class="navbar navbar-inverse wow fadeInDown animated" style="background-color: #d80027; height: 80px">
+			<div class="container-fluid">
+
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <div class="nav-row wow fadeInDown animated" id="nav-profile"  data-wow-delay="1.6s">
+			  	<a href="#">My Profile<img class="nav-icon" id="profile-icon" src="images/user2.png"></a>
+			  </div>
+			  <div class="nav-row wow fadeInDown animated" id="nav-events">
+			  	<a href="#">Find Events<img class="nav-icon" id="profile-icon" src="images/notification2.png"></a>
+			  </div>
+			  <div class="nav-row wow fadeInDown animated" id="nav-friends">
+			  	<a href="#">Find Friends<img class="nav-icon" id="profile-icon" src="images/user-plus2.png"></a>
+			  </div>
+			  <div class="nav-row wow fadeInDown animated" id="nav-messages">
+			  <a href="#">Messages<img class="nav-icon" id="profile-icon" src="images/speech-bubble2.png"></a>
+			  </div>
+			</div>
+
+			<!-- Use any element to open the sidenav -->
+			<span onclick="openNav()">			
+				<div id="nav-icon2" >
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+			</span>
+
+			<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+			<div id="main">
+			 
+			</div>
+				<!--Logo! -->	
+				<div class="navbar-header">
+					<div class="row text-center">
+						<img id="nav-logo" src="images/logo-1.png">
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div id="events-container" class="wow fadeInLeft animated" data-wow-delay="1.6s">
+						<div id="empty"></div>
+						<div id="header-band">
+							<div class="row text-center">
+								<h1 id="events-title">Find Events</h1>
+							</div>
+						</div>
+					</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div id="find-friends-container" class="wow fadeInLeft animated" data-wow-delay="1.6s">
+						<div id="empty"></div>
+						<div id="header-band">
+							<div class="row text-center">
+								<h1 id="find-friends-title">Find New Friends +</h1>
+							</div>
+						</div>
+					</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+
+
+		<div class="container-fluid" >
+			<div class="row text-center">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div id="profile-container" class="wow fadeInLeft animated" data-wow-delay="1.6s">
+						<div id="empty"></div>
+						<div id="header-band">
+							<img id="profile-pic" src="http://www.sketchoholic.com/uploads/userfiles/14298/40ddd8e187_Robert_Plant_ok.jpg">
+							<h1 id="profile-title">Matthew Reid</h1>
+						</div>
+							<ul class="nav nav-tabs">
+							  <li class="active"><a href="#">Posts</a></li>
+							  <li><a href="#">Friends</a></li>
+							  <li><a href="#">Events</a></li>
+							</ul>
+						<div class="col-sm-10">
+							<div id="user-info-con">
+								Address: Basking Ridge, NJ
+								<br>
+								Interests: Jazz, Rock, Folk, Bluess
+							</div>
+						</div>
+						<div class="col-sm-2">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+
+		//$("#profile-container").hide();
+		$("#find-friends-container").hide();
+		$("#events-container").hide();
+		$(document).ready(function(){
+			$('#nav-icon2').click(function(){
+				$(this).toggleClass('open');
+			});
+		});	
+		function showProfile () {
+			$("#profile-container").fadeIn();
+			
+		};
+		function showFriends() {
+			$("#find-friends-container").fadeIn();
+
+		};
+		function showEvents() {
+			$("#events-container").fadeIn();
+		};
+		$("#nav-profile").on("click", function(){
+			$("#find-friends-container").fadeOut({queue: false});
+			$("#events-container").fadeOut({queue: false});
+			setTimeout(showProfile, 800);
+		});
+		$("#nav-friends").on("click", function(){
+			$("#profile-container").fadeOut({queue: false});
+			$("#events-container").fadeOut({queue: false});
+			setTimeout(showFriends, 800);
+		});
+		$("#nav-events").on("click", function(){
+			$("#profile-container").fadeOut({queue: false});
+			$("#find-friends-container-container").fadeOut({queue: false});
+			setTimeout(showEvents, 800);
+		});
+
+		/* Set the width of the side navigation to 250px */
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+    		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		/* Set the width of the side navigation to 0 */
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+
+
+	</script>
+</body>
+</html>
+
+

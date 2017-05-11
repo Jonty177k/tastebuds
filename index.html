@@ -1,0 +1,269 @@
+<!-- Login Index Page
+Users Login or Create Accounts-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script src="js/wow.min.js"></script>
+	<script src="js/wow.js"></script>
+<!-- <script src="js/particles.js"></script> -->	
+	<script src="js/particles.min.js"></script>
+	<title>TasteBuds Login</title>
+</head>
+<body>
+	<div id="particle-js"></div>
+	<div id="login-background">
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img id="intro-logo" src="images/logo-3.png">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="wow fadeInDown animated" id="login-container" data-wow-delay="1.6s">
+					<div>
+						<img id="login-title" src="images/logo-1.png">
+					</div>
+					<div id="username">
+						<img id="user-pic" src="images/user.png"><input id="user-name-input" placeholder="  Username">
+					</div>
+					<div id="password">
+						<img id="lock-pic" src="images/padlock.png"><input type="password" id="pw-input" placeholder="  Password">
+					</div>
+					<div id="button-row" class="wow bounce animated" data-wow-delay="2.4s">
+
+						<a href="user-view.html"><img id="login-button" src="images/login.png"></a>
+						<img id="add-user-button" src="images/user-plus.png">
+						<img id="settings-button" src="images/settings.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8" id="add-container">
+						<div id="add-user-title">Create Account (1/2)</div>
+						<div id="add-user-container-2">
+							<div id="topText" class="add-user-text">Choose a Username</div><input class="add-user-input">
+							<div class="add-user-text">Choose a Password</div><input class="add-user-input" type="password">
+							<div class="add-user-text">Home Address</div><input class="add-user-input">
+							<div class="add-user-text">Profile Picture Link</div><input id="bottomInput" class="add-user-input">
+						</div>
+						<img class="wow rollIn animated" id="confirm-form-btn-1" src="images/checked.png">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4" id="survey-container">
+						<div id="survey-title">What's Your Jam? (2/2)</div>
+						<div class="col-sm-4">
+							<div class="genre wow fadeInDown animated" data-wow-delay=".1s" id="rock">Rock</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".2s" id="reggae">Reggae</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".3s" id="punk">Punk</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="genre wow fadeInDown animated" data-wow-delay=".4s" id="dance">Dance</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".5s" id="soul">Soul</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".6s" id="rnb">RnB</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="genre wow fadeInDown animated" data-wow-delay=".7s" id="jazz">Jazz</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".8s" id="hip-hop">Hip Hop</div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".9s" id="folk">Folk</div>
+						</div>
+						<img class="wow rollIn animated" id="confirm-form-btn-2" src="images/checked.png">
+<!-- 						<div class="wow fadeInDown animated" id="user-created">New Account Created!</div>
+ -->				</div>
+				<div class="col-sm-4"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+	new WOW().init();
+
+	particlesJS("particle-js", {
+		  "particles": {
+		    "number": {
+		      "value": 18,
+		      "density": {
+		        "enable": true,
+		        "value_area": 552.4033491425909
+		      }
+		    },
+		    "color": {
+		      "value": "#ffffff"
+		    },
+		    "shape": {
+		      "type": "circle",
+		      "stroke": {
+		        "width": 0,
+		        "color": "#000000"
+		      },
+		      "polygon": {
+		        "nb_sides": 3
+		      },
+		      "image": {
+		        "src": "img/github.svg",
+		        "width": 100,
+		        "height": 100
+		      }
+		    },
+		    "opacity": {
+		      "value": 0.68138006139568634,
+		      "random": false,
+		      "anim": {
+		        "enable": false,
+		        "speed": 1,
+		        "opacity_min": 0.1,
+		        "sync": false
+		      }
+		    },
+		    "size": {
+		      "value": 3,
+		      "random": true,
+		      "anim": {
+		        "enable": false,
+		        "speed": 40,
+		        "size_min": 0.1,
+		        "sync": false
+		      }
+		    },
+		    "line_linked": {
+		      "enable": true,
+		      "distance": 189.39543399174545,
+		      "color": "#ffffff",
+		      "opacity": 0.3815039575754227,
+		      "width": 1.736124811591
+		    },
+		    "move": {
+		      "enable": true,
+		      "speed": .8,
+		      "direction": "none",
+		      "random": false,
+		      "straight": false,
+		      "out_mode": "out",
+		      "bounce": false,
+		      "attract": {
+		        "enable": false,
+		        "rotateX": 600,
+		        "rotateY": 1200
+		      }
+		    }
+		  },
+		  "interactivity": {
+		    "detect_on": "window",
+		    "events": {
+		      "onhover": {
+		        "enable": false,
+		        "mode": "repulse"
+		      },
+		      "onclick": {
+		        "enable": true,
+		        "mode": "repulse"
+		      },
+		      "resize": true
+		    },
+		    "modes": {
+		      "grab": {
+		        "distance": 400,
+		        "line_linked": {
+		          "opacity": 1
+		        }
+		      },
+		      "bubble": {
+		        "distance": 400,
+		        "size": 40,
+		        "duration": 2,
+		        "opacity": 8,
+		        "speed": 3
+		      },
+		      "repulse": {
+		        "distance": 103.89610389610391,
+		        "duration": 0.4
+		      },
+		      "push": {
+		        "particles_nb": 4
+		      },
+		      "remove": {
+		        "particles_nb": 2
+		      }
+		    }
+		  },
+		  "retina_detect": true
+		});
+
+	$("#intro-logo").hide();
+	$("#particle-js").hide();
+	$("#add-container").hide();
+	$("#survey-container").hide();
+	// $("#user-created").hide();
+
+	function removeLogo() {
+		$("#intro-logo").fadeOut({queue: false, duration: 700});
+	}
+	function showParticles() {
+		$("#particle-js").fadeIn();
+	}
+	function showCrtAcc() {
+		$("#add-container").fadeIn({queue: false, duration: 600}).animate({top:'180px'}, 550);
+	}
+	function showUserSurvey() {
+		$("#survey-container").fadeIn({queue: false, duration: 600}).animate({top:'180px'}, 550);
+	}
+	function showLogin() {
+		$("#login-container").fadeIn();
+	}
+	// function hideFlag() {
+	// 	$("#intro-logo").fadeOut({queue: false, duration: 700});
+	// }
+
+	$(document).ready(function(){
+
+		$("#intro-logo").fadeIn({queue: false, duration: 650}).animate({top:'280px'}, 650);
+
+		setTimeout(removeLogo, 1020);
+		setTimeout(showParticles, 1500);
+		$("#add-user-button").click(function(){
+			$("#login-container").removeClass("wow fadeInDown animated");
+			$("#login-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showCrtAcc, 1010);
+		});
+		$("#confirm-form-btn-1").click(function(){
+			$("#add-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showUserSurvey, 1010);
+		});
+		$("#confirm-form-btn-2").click(function(){
+			// $("#user-created").fadeIn({queue: false, duration: 650}).animate({left:'280px', bottom: '100px'}, 650);
+			$("#survey-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showLogin, 1010);
+		});
+		$("#rock").on("click", function(){
+			console.log("hello");
+			$("#rock").css("background-color", "8fb7ff");
+		});
+	});
+	</script>
+
+</body>
+</html>
